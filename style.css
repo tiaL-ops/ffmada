@@ -1,172 +1,35 @@
 /* Global Styles */
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
     line-height: 1.8;
 }
 
-/* Navbar */
-.nav-link {
-    position: relative;
-    color: #4a5568;
-    text-decoration: none;
-    transition: color 0.3s ease;
+.hero {
+    height: 100vh;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url('https://source.unsplash.com/1600x900/?madagascar,school') no-repeat center center/cover;
 }
 
-.nav-link:hover {
-    color: #5a67d8;
+.hero h1, .hero p {
+    margin: 0;
+    animation: fadeIn 2s ease-in-out;
 }
 
-.nav-link::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 2px;
-    bottom: -5px;
-    left: 0;
-    background-color: #5a67d8;
-    transform-origin: bottom right;
-    transition: transform 0.3s ease-out;
-}
-
-.nav-link:hover::after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-}
-
-/* Hero Section */
-.hero-title {
-    animation: fadeInDown 1s ease-in-out;
-}
-
-.hero-subtitle {
-    animation: fadeInUp 1s ease-in-out 0.5s;
-    animation-fill-mode: backwards;
-}
-
-.join-us-btn {
-    display: inline-block;
-    background-color: #FBBF24; /* Yellow */
-    color: #1F2937; /* Dark Gray */
-    font-weight: bold;
-    padding: 1rem 2.5rem;
-    border-radius: 9999px;
-    font-size: 1.125rem;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease;
-    animation: fadeInUp 1s ease-in-out 1s;
-    animation-fill-mode: backwards;
-}
-
-.join-us-btn:hover {
-    background-color: #F59E0B; /* Darker Yellow */
-    transform: scale(1.05);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-}
-
-/* Section Titles */
-.section-title {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #4c51bf;
-    margin-bottom: 1rem;
-}
-
-.section-subtitle {
-    color: #4a5568;
-    font-size: 1.125rem;
-    max-width: 48rem;
-    margin: 0 auto;
-}
-
-/* Program Cards */
 .program-card {
-    background: white;
-    padding: 2.5rem;
-    border-radius: 0.75rem;
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-    text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .program-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
-
-/* Gallery */
-.gallery-item {
-    overflow: hidden;
-    border-radius: 0.75rem;
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-}
-
-.gallery-item img {
-    width: 100%;
-    height: 16rem;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-}
-
-.gallery-item:hover img {
-    transform: scale(1.1);
-}
-
-/* Involvement Cards */
-.involve-card {
-    padding: 2.5rem;
-    border-radius: 0.75rem;
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-    background-color: #e0e7ff;
-    transition: background-color 0.3s ease;
-}
-
-.involve-card:hover {
-    background-color: #c7d2fe;
-}
-
-.involve-link {
-    color: #5a67d8;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-.involve-link:hover {
-    text-decoration: underline;
-}
-
 
 /* Animations */
-@keyframes fadeInDown {
+@keyframes fadeIn {
     from {
         opacity: 0;
-        transform: translateY(-20px);
     }
     to {
         opacity: 1;
-        transform: translateY(0);
     }
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.reveal {
-    position: relative;
-    transform: translateY(150px);
-    opacity: 0;
-    transition: all 1s ease;
-}
-
-.reveal.active {
-    transform: translateY(0px);
-    opacity: 1;
 }
